@@ -1,0 +1,50 @@
+# --- Python & Bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+# Common names for virtual envs
+venv/
+env/
+.venv/
+.env/
+
+# --- Environment Variables & Secrets (CRITICAL) ---
+# Never commit your .env file containing DB passwords or API keys
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- IDE & Editor Configs ---
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains / PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# --- Database ---
+# SQLite (if you ever use it for testing)
+*.sqlite3
+*.db
+
+# --- Testing & Coverage ---
+.coverage
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# --- Distribution / Packaging ---
+dist/
+build/
+*.egg-info/
