@@ -8,6 +8,9 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+if DATABASE_URL and "?schema=" in DATABASE_URL:
+    DATABASE_URL = DATABASE_URL.split("?schema=")[0]
+
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

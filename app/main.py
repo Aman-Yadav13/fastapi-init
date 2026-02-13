@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from . import models
 from .database import engine
-from .routers import secure_route
+from .routers import cloud
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(secure_route.router)
+app.include_router(cloud.router)
 
 @app.get("/")
 def read_root():

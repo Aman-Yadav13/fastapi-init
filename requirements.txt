@@ -6,3 +6,6 @@ pydantic
 python-dotenv
 requests
 python-jose[cryptography]
+pandas
+boto3
+pytz
